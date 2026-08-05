@@ -1,5 +1,21 @@
+using ManagementSystem.Api.Models.Entities;
+using Microsoft.EntityFrameworkCore;
+
 namespace ManagementSystem.Api.Data;
 
-public class AppDbContext
+public class AppDbContext : DbContext
 {
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+    {
+        
+    }
+
+    public DbSet<User> Users => Set<User>();
+    public DbSet<Role> Roles => Set<Role>();
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+    }
+
 }
