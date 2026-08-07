@@ -3,13 +3,13 @@ POST  http://localhost:5056/api/Users
 Content-Type: application/json
 
 {
-  "email": "jane.doe@example.com",
-  "firstName": "Jane",
-  "lastName": "Doe",
+  "email": "arjhen.madlangsakay@example.com",
+  "firstName": "Arjhen",
+  "lastName": "Madlangsakay",
   "password": "1q2w#E$R",
-  "roleIds": [1, 2]
+  "roleIds": [2]
 }
 
 ###
-GET   http://localhost:5056/api/Users
+GET   http://localhost:5056/api/Users?pageNumber=2&pageSize=5
 Content-Type: application/json

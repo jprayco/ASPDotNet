@@ -13,6 +13,7 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         entity.HasIndex(u => u.Email).IsUnique();
         entity.Property(u => u.FirstName).IsRequired().HasMaxLength(100);
         entity.Property(u => u.LastName).IsRequired().HasMaxLength(100);
+        entity.Property(u => u.IsActive).IsRequired().HasDefaultValue(false);
 
         entity.HasMany(u => u.Roles)
               .WithMany(r => r.Users)

@@ -1,4 +1,5 @@
 using AutoMapper;
+using ManagementSystem.Api.Common;
 using ManagementSystem.Api.Models.DTOs.Request;
 using ManagementSystem.Api.Models.DTOs.Response;
 using ManagementSystem.Api.Models.Entities;
@@ -48,10 +49,16 @@ public class UserService : IUserServices
         return _mapper.Map<UserResponse>(createdUser);
     }
 
-    public async Task<List<UserResponse>> GetAllUsersAsync()
+    public async Task<PagedResult<UserResponse>> GetPagedAllUsersAsync(int PageNumber, int PageSize, CancellationToken ct = default)
     {
-        var users = await _userRepository.GetAllUsersAsync();
-        return _mapper.Map<List<UserResponse>>(users);
-    }
+        var paged = await _userRepository.GetAllUsersPagedAsync(PageNumber, PageSize, ct);
 
+        return new PagedResult<UserResponse>
+        {
+            Data = _mapper.Map<List<UserResponse>>(paged.Data),
+            PageNumber = paged.PageNumber,
+            PageSize = paged.PageSize,
+            TotalCount = paged.TotalCount
+        };
+    }
 }
