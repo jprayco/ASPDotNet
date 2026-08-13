@@ -8,4 +8,9 @@ public interface IUserRepository
     Task<User?> GetByEmailAsync(string email);
     Task<User> AddAsync(User user);
     Task<PagedResult<User>> GetAllUsersPagedAsync(int pageNumber, int pageSize, CancellationToken ct = default);
+    Task<User?> GetByUsernameAsync(string username);
+    Task<User?> GetByIdAsync(Guid id);
+    Task<User> UpdateAsync(User user);
+    Task<bool> ExistsAsync(string username, string email);
+    Task<User?> GetByRefreshTokenAsync(string refreshTokenHash);
 }

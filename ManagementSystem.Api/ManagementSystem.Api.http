@@ -1,15 +1,29 @@
-
-POST  http://localhost:5056/api/Users
+###
+POST  https://localhost:7194/api/Users/login
 Content-Type: application/json
 
 {
-  "email": "arjhen.madlangsakay@example.com",
-  "firstName": "Arjhen",
-  "lastName": "Madlangsakay",
-  "password": "1q2w#E$R",
-  "roleIds": [2]
+  "username": "ethan",
+  "password": "1q2w#E$R"
 }
 
 ###
-GET   http://localhost:5056/api/Users?pageNumber=2&pageSize=5
+POST https://localhost:7194/api/Users/refresh
 Content-Type: application/json
+Cookie: refreshToken=6EJGXVSj+YB+qO+5N4WCYPPZQSDj+f+ewfkWeDY5LZbegydMpbP5Q1hMGhsmIXHwZFSHH1fVy7JtRGU8ppl0GQ==
+###
+GET https://localhost:7194/api/Users?pageNumber=1&pageSize=5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiMThjNWYyNy1mYWU5LTRjOWQtOWEyZi00OTk3YTU4NjlhOTgiLCJ1bmlxdWVfbmFtZSI6ImV0aGFuIiwianRpIjoiMzU5MmE0ZmItZDAxNy00YTM1LWFmMGUtZTUwNmY5ODgwMjdlIiwiZXhwIjoxNzg2NTg4NTI2LCJpc3MiOiJNYW5hZ2VtZW50U3lzdGVtLkFwaSIsImF1ZCI6Ik1hbmFnZW1lbnRTeXN0ZW0uQ2xpZW50In0.zoMTZZyktr3PFQ842NgnMqoetXCw95thv5x1cdsNa0s
+###
+POST  https://localhost:7194/api/Users/register
+Content-Type: application/json
+
+{
+  "email": "ethan.walker@example.com",
+  "firstName": "Ethan",
+  "lastName": "Walker",
+  "username": "ethan",
+  "password": "1q2w#E$R",
+  "roleIds": [2]
+}
