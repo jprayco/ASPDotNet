@@ -162,3 +162,5 @@ C:\Users\BSI-JEAN-MSS\Documents\TechStack\ASPnet\ManagementSystem.Api\Management
 C:\Users\BSI-JEAN-MSS\Documents\TechStack\ASPnet\ManagementSystem.Api\ManagementSystem.Api\bin\Debug\net10.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\BSI-JEAN-MSS\Documents\TechStack\ASPnet\ManagementSystem.Api\ManagementSystem.Api\bin\Debug\net10.0\AutoMapper.dll
 C:\Users\BSI-JEAN-MSS\Documents\TechStack\ASPnet\ManagementSystem.Api\ManagementSystem.Api\bin\Debug\net10.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\BSI-JEAN-MSS\Documents\TechStack\ASPnet\ManagementSystem.Api\ManagementSystem.Api\bin\Debug\net10.0\BCrypt-Net-Next.dll
+C:\Users\BSI-JEAN-MSS\Documents\TechStack\ASPnet\ManagementSystem.Api\ManagementSystem.Api\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

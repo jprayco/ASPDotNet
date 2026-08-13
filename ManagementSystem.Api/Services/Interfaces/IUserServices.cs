@@ -6,6 +6,5 @@ namespace ManagementSystem.Api.Services.Interfaces;
 
 public interface IUserServices
 {
-        Task<UserResponse> CreateUserAsync(CreateUserRequest request);
         Task<PagedResult<UserResponse>> GetPagedAllUsersAsync(int PageNumber, int PageSize, CancellationToken ct = default);
 }
