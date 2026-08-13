@@ -1,16 +1,11 @@
-using System.Text;
 using FluentValidation;
 using FluentValidation.AspNetCore;
-using ManagementSystem.Api.Configuration;
 using ManagementSystem.Api.Data;
 using ManagementSystem.Api.Extensions;
 using ManagementSystem.Api.Models.Entities;
 using ManagementSystem.Api.Validators;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
